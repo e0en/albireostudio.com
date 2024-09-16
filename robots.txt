@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /electric-notice
+Disallow: /electric-notice.html

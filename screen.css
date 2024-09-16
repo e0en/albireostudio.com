@@ -1,24 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
 :root {
-  box-sizing: content-box;
+  box-sizing: border-box;
   font-size: 16px;
+  font-weight: 300;
   line-height: 1.5rem;
+  --fg-color: #000;
+  --bg-color: #fff;
+  --logo-size: 2rem;
 }
 
 html {
   height: 100%;
 }
+
 body {
   width: 100%;
   max-width: 80ch;
   min-height: 100%;
   margin: 0 auto;
   padding: 1rem;
-  background: #fff;
-  font-family: monospace;
+  background: var(--bg-color);
+  color: var(--fg-color);
+  font-family: "Noto Sans Mono", monospace;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 80%;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  font-weight: 800;
+}
+
+.logo {
+  height: var(--logo-size);
+  display: inline-block;
+  margin-bottom: -0.2rem;
+}
+
+header h1 {
+  font-size: calc(var(--logo-size) / 3 * 2);
+}
+
+header h2 {
+  font-size: var(--logo-size);
 }
 
 a {
   color: blue;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--fg-color);
 }
 
 p,
@@ -26,14 +67,15 @@ img {
   max-width: 100%;
 }
 
-.logo {
-  height: 3rem;
+footer a {
+  color: var(--fg-color);
 }
 
+
 @media (prefers-color-scheme: dark) {
-  body {
-    background: #000;
-    color: #eee;
+  :root {
+    --fg-color: #fff;
+    --bg-color: #000;
   }
   .logo {
     filter: invert(100%);
